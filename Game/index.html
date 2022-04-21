@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <script src="https://kit.fontawesome.com/3da1a747b2.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css">
+</head>
+
+<body>
+    <!-- Define main container and put all elements into it -->
+    <div class="container">
+        <header class="header">
+            <h1>Rock Paper Sissors</h1>
+            <button class="restart-btn" id="restart">Restart Game</button>
+            <div id="score" class="score">
+                <p id="ply1">Player 1: 0</p>
+                <p id="ply2">Player 2: 0</p>
+            </div>
+        </header>
+
+        <h2>Make Your Selection</h2>
+        <!-- Add three new images to my website -->
+        <div class="choices">
+            <img class="choice" id="rock" src="rock.jpeg" style="height: 200px;width: 200px;">
+            <img class="choice" id="paper" src="paper.png" style="height: 200px;width: 200px;">
+            <img class="choice" id="scissors" src="scissors.jpeg" style="height: 200px;width: 200px;">
+        </div>
+        <!-- Add two new features -->
+        <div id="new-score" class="new-score" style="margin-top: 60px;">
+            <p>Number of Draws:0</p>
+            <p>Total games played:0</p>
+        </div>
+        <!-- Define a part for adding name of players and make them obligatory to fill -->
+        <div class="name">
+            <p>First Player name: <input id="name1" type="text"></p>
+            <p>Second Player name: <input id="name2" type="text"></p>
+            <button id="btn" onclick="addName()">Add</button>
+
+        </div>
+        <h3>Date of Playing Game: </h3>
+        <p id="date"></p>
+        <script>
+            // Add date to the game
+            document.getElementById("date").innerHTML = new Date().toLocaleDateString();
+        </script>
+
+    </div>
+    <!-- Define modal part which will be shown when the game starts -->
+    <!-- Modal -->
+    <div class="modal">
+        <div id="result" class="modal-content">
+            <h1 class="tex-win">You win</h1>
+        </div>
+
+    </div>
+
+
+
+    <!-- Add Script and join it to the html part -->
+    <script src="index.js"></script>
+</body>
+
+</html>
